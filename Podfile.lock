@@ -1,0 +1,14 @@
+
+PODS:
+- AFNetworking (1.1.0)
+- Kal (1.0rc1)
+
+DEPENDENCIES:
+- AFNetworking
+- Kal
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  Kal: 1662d563939f65065f878ac82a90bb34863634ef
+
+COCOAPODS: 0.16.0

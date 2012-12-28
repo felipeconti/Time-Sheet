@@ -25,9 +25,9 @@
 
 - (void)viewDidLoad
 {
-//    KalViewController *calendar = [[KalViewController alloc] init];
-//    calendar.title = @"Time Sheet";
-//    [self.navigationController addChildViewController:calendar];
+    KalViewController *calendar = [[KalViewController alloc] init];
+    calendar.title = @"Time Sheet";
+    [self.navigationController addChildViewController:calendar];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
