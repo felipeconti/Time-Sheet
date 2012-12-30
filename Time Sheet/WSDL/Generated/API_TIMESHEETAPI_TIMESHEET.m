@@ -36,7 +36,7 @@
 	}
 	
 	+ (API_TIMESHEETAPI_TIMESHEET*) serviceWithUsername: (NSString*) username andPassword: (NSString*) password {
-		return [[[API_TIMESHEETAPI_TIMESHEET alloc] initWithUsername:username andPassword:password] autorelease];
+		return [[API_TIMESHEETAPI_TIMESHEET alloc] initWithUsername:username andPassword:password];
 	}
 
 		
@@ -50,7 +50,7 @@
 		{
 		NSMutableArray* _params = [NSMutableArray array];
 		
-		[_params addObject: [[[SoapParameter alloc] initWithValue: CXML forName: @"CXML"] autorelease]];
+		[_params addObject: [[SoapParameter alloc] initWithValue: CXML forName: @"CXML"]];
 		NSString* _envelope = [Soap createEnvelope: @"GET_TS" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
 		SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://172.16.103.194:8080/GET_TS" postData: _envelope deserializeTo: @"NSString"];
 		[_request send];

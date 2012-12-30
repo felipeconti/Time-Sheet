@@ -1,8 +1,8 @@
 //
-//  CXMLNode_XPathExtensions.h
+//  CTidy.h
 //  TouchCode
 //
-//  Created by Jonathan Wight on 04/01/08.
+//  Created by Jonathan Wight on 03/07/08.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are
@@ -29,11 +29,27 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-#import "CXMLNode.h"
+#ifdef TOUCHXMLUSETIDY
 
-@interface CXMLNode (CXMLNode_XPathExtensions)
+#import <Foundation/Foundation.h>
 
-- (NSArray *)nodesForXPath:(NSString *)xpath namespaceMappings:(NSDictionary *)inNamespaceMappings error:(NSError **)error;
-- (CXMLNode *)nodeForXPath:(NSString *)xpath error:(NSError **)outError;
+#include "tidy.h"
+#include "buffio.h"
+
+typedef enum {
+	TidyFormat_HTML,
+	TidyFormat_XML,
+	TidyFormat_XHTML,
+} CTidyFormat;
+
+@interface CTidy : NSObject {
+}
+
++ (CTidy *)tidy;
+
+- (NSData *)tidyData:(NSData *)inData inputFormat:(CTidyFormat)inInputFormat outputFormat:(CTidyFormat)inOutputFormat encoding:(const char *)encoding diagnostics:(NSString **)outDiagnostics error:(NSError **)outError;
+- (NSString *)tidyString:(NSString *)inString inputFormat:(CTidyFormat)inInputFormat outputFormat:(CTidyFormat)inOutputFormat encoding:(const char *)encoding diagnostics:(NSString **)outDiagnostics error:(NSError **)outError;
 
 @end
+
+#endif /* TOUCHXMLUSETIDY */

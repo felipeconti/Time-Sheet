@@ -22,11 +22,11 @@
 }
 
 +(API_TIMESHEETServices*)service{
-	return (API_TIMESHEETServices*)[[[API_TIMESHEETServices alloc] init] autorelease];
+	return (API_TIMESHEETServices*)[[API_TIMESHEETServices alloc] init];
 }
 
 +(API_TIMESHEETServices*)serviceWithServer:(NSString*)serverName{
-	return (API_TIMESHEETServices*)[[[API_TIMESHEETServices alloc] initWithServer:serverName] autorelease];
+	return (API_TIMESHEETServices*)[[API_TIMESHEETServices alloc] initWithServer:serverName];
 }
 
 #pragma mark Methods
@@ -37,8 +37,7 @@
 }
 
 -(void)setServer:(NSString*)value{
-	[server release];
-	server = [value retain];
+	server = value;
 	[self updateServices];
 }
 

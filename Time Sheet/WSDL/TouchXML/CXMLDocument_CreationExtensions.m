@@ -1,8 +1,8 @@
 //
-//  CXMLNode_XPathExtensions.h
+//  CXMLDocument_CreationExtensions.m
 //  TouchCode
 //
-//  Created by Jonathan Wight on 04/01/08.
+//  Created by Jonathan Wight on 11/11/08.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are
@@ -29,11 +29,27 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-#import "CXMLNode.h"
+#import "CXMLDocument_CreationExtensions.h"
 
-@interface CXMLNode (CXMLNode_XPathExtensions)
+#import "CXMLElement.h"
+#import "CXMLNode_PrivateExtensions.h"
+#import "CXMLDocument_PrivateExtensions.h"
 
-- (NSArray *)nodesForXPath:(NSString *)xpath namespaceMappings:(NSDictionary *)inNamespaceMappings error:(NSError **)error;
-- (CXMLNode *)nodeForXPath:(NSString *)xpath error:(NSError **)outError;
+@implementation CXMLDocument (CXMLDocument_CreationExtensions)
+
+- (void)insertChild:(CXMLNode *)child atIndex:(NSUInteger)index
+{
+[self.nodePool addObject:child];
+
+CXMLNode *theCurrentNode = [self.children objectAtIndex:index];
+xmlAddPrevSibling(theCurrentNode->_node, child->_node);
+}
+
+- (void)addChild:(CXMLNode *)child
+{
+[self.nodePool addObject:child];
+
+xmlAddChild(self->_node, child->_node);
+}
 
 @end

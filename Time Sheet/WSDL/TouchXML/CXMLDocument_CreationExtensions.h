@@ -1,8 +1,8 @@
 //
-//  CXMLNode_XPathExtensions.h
+//  CXMLDocument_CreationExtensions.h
 //  TouchCode
 //
-//  Created by Jonathan Wight on 04/01/08.
+//  Created by Jonathan Wight on 11/11/08.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are
@@ -29,11 +29,21 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-#import "CXMLNode.h"
+#import "CXMLDocument.h"
 
-@interface CXMLNode (CXMLNode_XPathExtensions)
+@interface CXMLDocument (CXMLDocument_CreationExtensions)
 
-- (NSArray *)nodesForXPath:(NSString *)xpath namespaceMappings:(NSDictionary *)inNamespaceMappings error:(NSError **)error;
-- (CXMLNode *)nodeForXPath:(NSString *)xpath error:(NSError **)outError;
+//- (void)setVersion:(NSString *)version; //primitive
+//- (void)setStandalone:(BOOL)standalone; //primitive
+//- (void)setDocumentContentKind:(CXMLDocumentContentKind)kind; //primitive
+//- (void)setMIMEType:(NSString *)MIMEType; //primitive
+//- (void)setDTD:(CXMLDTD *)documentTypeDeclaration; //primitive
+//- (void)setRootElement:(CXMLNode *)root;
+- (void)insertChild:(CXMLNode *)child atIndex:(NSUInteger)index;
+//- (void)insertChildren:(NSArray *)children atIndex:(NSUInteger)index;
+//- (void)removeChildAtIndex:(NSUInteger)index; //primitive
+//- (void)setChildren:(NSArray *)children; //primitive
+- (void)addChild:(CXMLNode *)child;
+//- (void)replaceChildAtIndex:(NSUInteger)index withNode:(CXMLNode *)node;
 
 @end
