@@ -7,11 +7,14 @@
 //
 
 #import "SemTableViewController.h"
+#import "API_TIMESHEET.h"
 
 @interface SemTableViewController (){
     NSArray *TSs;
 }
 - (void)fetchData;
+- (NSString *) montaXML:(NSString*)tipo Data:(NSString*)data;
+- (void)RefreshData;
 @end
 
 @implementation SemTableViewController
@@ -21,7 +24,33 @@
 - (void)fetchData{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
+    NSString *cXML = [NSString stringWithFormat:@"%@", [self montaXML:@"1" Data:@"31/12/12"]];
+
+    API_TIMESHEET *Call = [[API_TIMESHEET alloc] init];
+    //TSs = [Call run:cXML];
+    [Call run:cXML];
+
+    [self.tableView reloadData];
+    
+    [self.refreshControl endRefreshing];
+    
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+#pragma mark - montaXML
+
+- (NSString *) montaXML:(NSString*)tipo Data:(NSString*)data{
+
+    NSMutableString* s = [NSMutableString string];
+	[s appendString: @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"];
+	[s appendString: @"<response>"];
+    
+	[s appendFormat: @"<tipo>%@</tipo>", tipo];
+	[s appendFormat: @"<data>%@</data>", data];
+
+	[s appendString: @"</response>"];
+
+    return s;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -39,6 +68,11 @@
     [self fetchData];
     [super viewDidLoad];
 
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    //refreshControl.tintColor = [UIColormagentaColor];
+    [refreshControl addTarget:self action:@selector(RefreshData) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -56,7 +90,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     // Return the number of rows in the section.
     return TSs.count;
 }
@@ -122,6 +155,10 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)RefreshData {
+    [self performSelector:@selector(fetchData) withObject:nil afterDelay:0];
 }
 
 @end

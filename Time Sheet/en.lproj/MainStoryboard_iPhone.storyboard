@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Dia-->
+        <!--Navigation Controller - Hoje-->
         <scene sceneID="T5V-UW-wMX">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Lmb-dF-X8D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dia" id="qo8-aL-pnG"/>
+                    <tabBarItem key="tabBarItem" title="Hoje" id="qo8-aL-pnG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DwL-l9-FOZ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -23,13 +23,13 @@
         <!--Mes View Controller - Time Sheet-->
         <scene sceneID="YVg-9h-dAh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSd-0V-6SU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Om8-mT-vit" customClass="MesViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mês" id="Ppg-Vk-V8S"/>
                     <navigationItem key="navigationItem" title="Time Sheet" id="f4w-NM-B4I">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dVe-xn-DHw"/>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zSd-0V-6SU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120" y="619"/>
         </scene>
@@ -37,7 +37,7 @@
         <scene sceneID="HKt-Sw-7pa">
             <objects>
                 <viewController id="tky-NF-7LS" customClass="DiaViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dia" id="EtJ-O6-dLR"/>
+                    <tabBarItem key="tabBarItem" title="Hoje" id="EtJ-O6-dLR"/>
                     <navigationItem key="navigationItem" title="Time Sheet" id="L7G-xW-zJ1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="a9u-mO-idS"/>
                     </navigationItem>
@@ -106,7 +106,7 @@
             <objects>
                 <tableViewController id="N19-Hs-NKG" customClass="SemTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fgl-aH-Ztq">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -148,6 +148,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

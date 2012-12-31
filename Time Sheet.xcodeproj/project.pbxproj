@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		550095611690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500951F1690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.m */; };
 		550095621690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095221690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m */; };
 		550095631690BE4700977D3E /* API_TIMESHEETServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095241690BE4700977D3E /* API_TIMESHEETServices.m */; };
 		550095641690BE4700977D3E /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095261690BE4700977D3E /* Soap+Prefix.m */; };
@@ -53,6 +52,7 @@
 		552714A9168E119200376CBD /* DiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A4168E119200376CBD /* DiaViewController.m */; };
 		552714AA168E119200376CBD /* MesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A6168E119200376CBD /* MesViewController.m */; };
 		552714AB168E119200376CBD /* SemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A8168E119200376CBD /* SemTableViewController.m */; };
+		55D7F4C11691EE6900025C69 /* API_TIMESHEET.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D7F4C01691EE6900025C69 /* API_TIMESHEET.m */; };
 		5F454CBB53344AAC816D6864 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0DA551B6B04628A9CEEEC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5500951E1690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEETAPI_TIMESHEETExample.h; sourceTree = "<group>"; };
-		5500951F1690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEETAPI_TIMESHEETExample.m; sourceTree = "<group>"; };
 		550095211690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEETAPI_TIMESHEET.h; sourceTree = "<group>"; };
 		550095221690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEETAPI_TIMESHEET.m; sourceTree = "<group>"; };
 		550095231690BE4700977D3E /* API_TIMESHEETServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEETServices.h; sourceTree = "<group>"; };
@@ -154,6 +152,8 @@
 		552714A7168E119200376CBD /* SemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SemTableViewController.h; path = Controllers/SemTableViewController.h; sourceTree = "<group>"; };
 		552714A8168E119200376CBD /* SemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SemTableViewController.m; path = Controllers/SemTableViewController.m; sourceTree = "<group>"; };
 		552714B4168E18BF00376CBD /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
+		55D7F4BF1691EE6900025C69 /* API_TIMESHEET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEET.h; sourceTree = "<group>"; };
+		55D7F4C01691EE6900025C69 /* API_TIMESHEET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEET.m; sourceTree = "<group>"; };
 		9F0DA551B6B04628A9CEEEC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E448DC025D1D4D10A4130354 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -177,21 +177,12 @@
 		5500951C1690BE4700977D3E /* WSDL */ = {
 			isa = PBXGroup;
 			children = (
-				5500951D1690BE4700977D3E /* Examples */,
+				55D7F4BE1691EE6900025C69 /* Call */,
 				550095201690BE4700977D3E /* Generated */,
 				550095271690BE4700977D3E /* Soap */,
 				550095451690BE4700977D3E /* TouchXML */,
 			);
 			path = WSDL;
-			sourceTree = "<group>";
-		};
-		5500951D1690BE4700977D3E /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-				5500951E1690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.h */,
-				5500951F1690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.m */,
-			);
-			path = Examples;
 			sourceTree = "<group>";
 		};
 		550095201690BE4700977D3E /* Generated */ = {
@@ -357,6 +348,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		55D7F4BE1691EE6900025C69 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				55D7F4BF1691EE6900025C69 /* API_TIMESHEET.h */,
+				55D7F4C01691EE6900025C69 /* API_TIMESHEET.m */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,7 +463,6 @@
 				552714A9168E119200376CBD /* DiaViewController.m in Sources */,
 				552714AA168E119200376CBD /* MesViewController.m in Sources */,
 				552714AB168E119200376CBD /* SemTableViewController.m in Sources */,
-				550095611690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEETExample.m in Sources */,
 				550095621690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m in Sources */,
 				550095631690BE4700977D3E /* API_TIMESHEETServices.m in Sources */,
 				550095641690BE4700977D3E /* Soap+Prefix.m in Sources */,
@@ -494,6 +493,7 @@
 				5500957D1690BE4700977D3E /* CXMLNode_CreationExtensions.m in Sources */,
 				5500957E1690BE4700977D3E /* CXMLNode_PrivateExtensions.m in Sources */,
 				5500957F1690BE4700977D3E /* CXMLNode_XPathExtensions.m in Sources */,
+				55D7F4C11691EE6900025C69 /* API_TIMESHEET.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
