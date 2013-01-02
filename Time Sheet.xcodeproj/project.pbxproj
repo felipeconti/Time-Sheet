@@ -7,36 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		550095621690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095221690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m */; };
-		550095631690BE4700977D3E /* API_TIMESHEETServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095241690BE4700977D3E /* API_TIMESHEETServices.m */; };
-		550095641690BE4700977D3E /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095261690BE4700977D3E /* Soap+Prefix.m */; };
-		550095651690BE4700977D3E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095291690BE4700977D3E /* NSData+Base64.m */; };
-		550095661690BE4700977D3E /* NSMutableArray+Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500952B1690BE4700977D3E /* NSMutableArray+Soap.m */; };
-		550095671690BE4700977D3E /* Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500952D1690BE4700977D3E /* Soap.m */; };
-		550095681690BE4700977D3E /* SoapArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500952F1690BE4700977D3E /* SoapArray.m */; };
-		550095691690BE4700977D3E /* SoapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095321690BE4700977D3E /* SoapDictionary.m */; };
-		5500956A1690BE4700977D3E /* SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095341690BE4700977D3E /* SoapFault.m */; };
-		5500956B1690BE4700977D3E /* SoapHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095361690BE4700977D3E /* SoapHandler.m */; };
-		5500956C1690BE4700977D3E /* SoapLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095381690BE4700977D3E /* SoapLiteral.m */; };
-		5500956D1690BE4700977D3E /* SoapNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500953A1690BE4700977D3E /* SoapNil.m */; };
-		5500956E1690BE4700977D3E /* SoapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500953C1690BE4700977D3E /* SoapObject.m */; };
-		5500956F1690BE4700977D3E /* SoapParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500953E1690BE4700977D3E /* SoapParameter.m */; };
-		550095701690BE4700977D3E /* SoapReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095401690BE4700977D3E /* SoapReachability.m */; };
-		550095711690BE4700977D3E /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095421690BE4700977D3E /* SoapRequest.m */; };
-		550095721690BE4700977D3E /* SoapService.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095441690BE4700977D3E /* SoapService.m */; };
-		550095731690BE4700977D3E /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095471690BE4700977D3E /* CTidy.m */; };
-		550095741690BE4700977D3E /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095491690BE4700977D3E /* CXHTMLDocument.m */; };
-		550095751690BE4700977D3E /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500954B1690BE4700977D3E /* CXMLDocument.m */; };
-		550095761690BE4700977D3E /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500954D1690BE4700977D3E /* CXMLDocument_CreationExtensions.m */; };
-		550095771690BE4700977D3E /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500954F1690BE4700977D3E /* CXMLDocument_PrivateExtensions.m */; };
-		550095781690BE4700977D3E /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095511690BE4700977D3E /* CXMLElement.m */; };
-		550095791690BE4700977D3E /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095531690BE4700977D3E /* CXMLElement_CreationExtensions.m */; };
-		5500957A1690BE4700977D3E /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095551690BE4700977D3E /* CXMLElement_ElementTreeExtensions.m */; };
-		5500957B1690BE4700977D3E /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095571690BE4700977D3E /* CXMLNamespaceNode.m */; };
-		5500957C1690BE4700977D3E /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 550095591690BE4700977D3E /* CXMLNode.m */; };
-		5500957D1690BE4700977D3E /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500955B1690BE4700977D3E /* CXMLNode_CreationExtensions.m */; };
-		5500957E1690BE4700977D3E /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500955D1690BE4700977D3E /* CXMLNode_PrivateExtensions.m */; };
-		5500957F1690BE4700977D3E /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5500955F1690BE4700977D3E /* CXMLNode_XPathExtensions.m */; };
+		5503D9211694A33200A8AB12 /* API_TIMESHEET.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D9161694A33200A8AB12 /* API_TIMESHEET.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5503D9221694A33200A8AB12 /* NSDate+ISO8601Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D9181694A33200A8AB12 /* NSDate+ISO8601Parsing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5503D9231694A33200A8AB12 /* NSDate+ISO8601Unparsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D91A1694A33200A8AB12 /* NSDate+ISO8601Unparsing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5503D9241694A33200A8AB12 /* USAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D91C1694A33200A8AB12 /* USAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5503D9251694A33200A8AB12 /* USGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D91E1694A33200A8AB12 /* USGlobals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5503D9261694A33200A8AB12 /* xsd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D9201694A33200A8AB12 /* xsd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5511EDC71690A3EC00059C50 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5511EDC61690A3EC00059C50 /* CFNetwork.framework */; };
 		55271473168E111600376CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55271472168E111600376CBD /* UIKit.framework */; };
 		55271475168E111600376CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55271474168E111600376CBD /* Foundation.framework */; };
@@ -52,7 +28,6 @@
 		552714A9168E119200376CBD /* DiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A4168E119200376CBD /* DiaViewController.m */; };
 		552714AA168E119200376CBD /* MesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A6168E119200376CBD /* MesViewController.m */; };
 		552714AB168E119200376CBD /* SemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A8168E119200376CBD /* SemTableViewController.m */; };
-		55D7F4C11691EE6900025C69 /* API_TIMESHEET.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D7F4C01691EE6900025C69 /* API_TIMESHEET.m */; };
 		5F454CBB53344AAC816D6864 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0DA551B6B04628A9CEEEC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,68 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		550095211690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEETAPI_TIMESHEET.h; sourceTree = "<group>"; };
-		550095221690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEETAPI_TIMESHEET.m; sourceTree = "<group>"; };
-		550095231690BE4700977D3E /* API_TIMESHEETServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEETServices.h; sourceTree = "<group>"; };
-		550095241690BE4700977D3E /* API_TIMESHEETServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEETServices.m; sourceTree = "<group>"; };
-		550095251690BE4700977D3E /* Soap+Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soap+Prefix.h"; sourceTree = "<group>"; };
-		550095261690BE4700977D3E /* Soap+Prefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Soap+Prefix.m"; sourceTree = "<group>"; };
-		550095281690BE4700977D3E /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		550095291690BE4700977D3E /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		5500952A1690BE4700977D3E /* NSMutableArray+Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Soap.h"; sourceTree = "<group>"; };
-		5500952B1690BE4700977D3E /* NSMutableArray+Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Soap.m"; sourceTree = "<group>"; };
-		5500952C1690BE4700977D3E /* Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Soap.h; sourceTree = "<group>"; };
-		5500952D1690BE4700977D3E /* Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Soap.m; sourceTree = "<group>"; };
-		5500952E1690BE4700977D3E /* SoapArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapArray.h; sourceTree = "<group>"; };
-		5500952F1690BE4700977D3E /* SoapArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArray.m; sourceTree = "<group>"; };
-		550095301690BE4700977D3E /* SoapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDelegate.h; sourceTree = "<group>"; };
-		550095311690BE4700977D3E /* SoapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDictionary.h; sourceTree = "<group>"; };
-		550095321690BE4700977D3E /* SoapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDictionary.m; sourceTree = "<group>"; };
-		550095331690BE4700977D3E /* SoapFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapFault.h; sourceTree = "<group>"; };
-		550095341690BE4700977D3E /* SoapFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapFault.m; sourceTree = "<group>"; };
-		550095351690BE4700977D3E /* SoapHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapHandler.h; sourceTree = "<group>"; };
-		550095361690BE4700977D3E /* SoapHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapHandler.m; sourceTree = "<group>"; };
-		550095371690BE4700977D3E /* SoapLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapLiteral.h; sourceTree = "<group>"; };
-		550095381690BE4700977D3E /* SoapLiteral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapLiteral.m; sourceTree = "<group>"; };
-		550095391690BE4700977D3E /* SoapNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapNil.h; sourceTree = "<group>"; };
-		5500953A1690BE4700977D3E /* SoapNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapNil.m; sourceTree = "<group>"; };
-		5500953B1690BE4700977D3E /* SoapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapObject.h; sourceTree = "<group>"; };
-		5500953C1690BE4700977D3E /* SoapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapObject.m; sourceTree = "<group>"; };
-		5500953D1690BE4700977D3E /* SoapParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapParameter.h; sourceTree = "<group>"; };
-		5500953E1690BE4700977D3E /* SoapParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapParameter.m; sourceTree = "<group>"; };
-		5500953F1690BE4700977D3E /* SoapReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapReachability.h; sourceTree = "<group>"; };
-		550095401690BE4700977D3E /* SoapReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapReachability.m; sourceTree = "<group>"; };
-		550095411690BE4700977D3E /* SoapRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapRequest.h; sourceTree = "<group>"; };
-		550095421690BE4700977D3E /* SoapRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapRequest.m; sourceTree = "<group>"; };
-		550095431690BE4700977D3E /* SoapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapService.h; sourceTree = "<group>"; };
-		550095441690BE4700977D3E /* SoapService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapService.m; sourceTree = "<group>"; };
-		550095461690BE4700977D3E /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
-		550095471690BE4700977D3E /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
-		550095481690BE4700977D3E /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
-		550095491690BE4700977D3E /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
-		5500954A1690BE4700977D3E /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
-		5500954B1690BE4700977D3E /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
-		5500954C1690BE4700977D3E /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
-		5500954D1690BE4700977D3E /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
-		5500954E1690BE4700977D3E /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
-		5500954F1690BE4700977D3E /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
-		550095501690BE4700977D3E /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
-		550095511690BE4700977D3E /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
-		550095521690BE4700977D3E /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
-		550095531690BE4700977D3E /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
-		550095541690BE4700977D3E /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
-		550095551690BE4700977D3E /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
-		550095561690BE4700977D3E /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
-		550095571690BE4700977D3E /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
-		550095581690BE4700977D3E /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
-		550095591690BE4700977D3E /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
-		5500955A1690BE4700977D3E /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
-		5500955B1690BE4700977D3E /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
-		5500955C1690BE4700977D3E /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
-		5500955D1690BE4700977D3E /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
-		5500955E1690BE4700977D3E /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
-		5500955F1690BE4700977D3E /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
-		550095601690BE4700977D3E /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		5503D9151694A33200A8AB12 /* API_TIMESHEET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEET.h; sourceTree = "<group>"; };
+		5503D9161694A33200A8AB12 /* API_TIMESHEET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEET.m; sourceTree = "<group>"; };
+		5503D9171694A33200A8AB12 /* NSDate+ISO8601Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601Parsing.h"; sourceTree = "<group>"; };
+		5503D9181694A33200A8AB12 /* NSDate+ISO8601Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601Parsing.m"; sourceTree = "<group>"; };
+		5503D9191694A33200A8AB12 /* NSDate+ISO8601Unparsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601Unparsing.h"; sourceTree = "<group>"; };
+		5503D91A1694A33200A8AB12 /* NSDate+ISO8601Unparsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601Unparsing.m"; sourceTree = "<group>"; };
+		5503D91B1694A33200A8AB12 /* USAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAdditions.h; sourceTree = "<group>"; };
+		5503D91C1694A33200A8AB12 /* USAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAdditions.m; sourceTree = "<group>"; };
+		5503D91D1694A33200A8AB12 /* USGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USGlobals.h; sourceTree = "<group>"; };
+		5503D91E1694A33200A8AB12 /* USGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USGlobals.m; sourceTree = "<group>"; };
+		5503D91F1694A33200A8AB12 /* xsd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xsd.h; sourceTree = "<group>"; };
+		5503D9201694A33200A8AB12 /* xsd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xsd.m; sourceTree = "<group>"; };
 		5511EDC61690A3EC00059C50 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		5527146E168E111600376CBD /* Time Sheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Sheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55271472168E111600376CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -152,8 +77,6 @@
 		552714A7168E119200376CBD /* SemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SemTableViewController.h; path = Controllers/SemTableViewController.h; sourceTree = "<group>"; };
 		552714A8168E119200376CBD /* SemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SemTableViewController.m; path = Controllers/SemTableViewController.m; sourceTree = "<group>"; };
 		552714B4168E18BF00376CBD /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
-		55D7F4BF1691EE6900025C69 /* API_TIMESHEET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_TIMESHEET.h; sourceTree = "<group>"; };
-		55D7F4C01691EE6900025C69 /* API_TIMESHEET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_TIMESHEET.m; sourceTree = "<group>"; };
 		9F0DA551B6B04628A9CEEEC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E448DC025D1D4D10A4130354 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -174,98 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5500951C1690BE4700977D3E /* WSDL */ = {
+		5503D9141694A33200A8AB12 /* WSDL */ = {
 			isa = PBXGroup;
 			children = (
-				55D7F4BE1691EE6900025C69 /* Call */,
-				550095201690BE4700977D3E /* Generated */,
-				550095271690BE4700977D3E /* Soap */,
-				550095451690BE4700977D3E /* TouchXML */,
+				5503D9151694A33200A8AB12 /* API_TIMESHEET.h */,
+				5503D9161694A33200A8AB12 /* API_TIMESHEET.m */,
+				5503D9171694A33200A8AB12 /* NSDate+ISO8601Parsing.h */,
+				5503D9181694A33200A8AB12 /* NSDate+ISO8601Parsing.m */,
+				5503D9191694A33200A8AB12 /* NSDate+ISO8601Unparsing.h */,
+				5503D91A1694A33200A8AB12 /* NSDate+ISO8601Unparsing.m */,
+				5503D91B1694A33200A8AB12 /* USAdditions.h */,
+				5503D91C1694A33200A8AB12 /* USAdditions.m */,
+				5503D91D1694A33200A8AB12 /* USGlobals.h */,
+				5503D91E1694A33200A8AB12 /* USGlobals.m */,
+				5503D91F1694A33200A8AB12 /* xsd.h */,
+				5503D9201694A33200A8AB12 /* xsd.m */,
 			);
 			path = WSDL;
-			sourceTree = "<group>";
-		};
-		550095201690BE4700977D3E /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				550095211690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.h */,
-				550095221690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m */,
-				550095231690BE4700977D3E /* API_TIMESHEETServices.h */,
-				550095241690BE4700977D3E /* API_TIMESHEETServices.m */,
-				550095251690BE4700977D3E /* Soap+Prefix.h */,
-				550095261690BE4700977D3E /* Soap+Prefix.m */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
-		550095271690BE4700977D3E /* Soap */ = {
-			isa = PBXGroup;
-			children = (
-				550095281690BE4700977D3E /* NSData+Base64.h */,
-				550095291690BE4700977D3E /* NSData+Base64.m */,
-				5500952A1690BE4700977D3E /* NSMutableArray+Soap.h */,
-				5500952B1690BE4700977D3E /* NSMutableArray+Soap.m */,
-				5500952C1690BE4700977D3E /* Soap.h */,
-				5500952D1690BE4700977D3E /* Soap.m */,
-				5500952E1690BE4700977D3E /* SoapArray.h */,
-				5500952F1690BE4700977D3E /* SoapArray.m */,
-				550095301690BE4700977D3E /* SoapDelegate.h */,
-				550095311690BE4700977D3E /* SoapDictionary.h */,
-				550095321690BE4700977D3E /* SoapDictionary.m */,
-				550095331690BE4700977D3E /* SoapFault.h */,
-				550095341690BE4700977D3E /* SoapFault.m */,
-				550095351690BE4700977D3E /* SoapHandler.h */,
-				550095361690BE4700977D3E /* SoapHandler.m */,
-				550095371690BE4700977D3E /* SoapLiteral.h */,
-				550095381690BE4700977D3E /* SoapLiteral.m */,
-				550095391690BE4700977D3E /* SoapNil.h */,
-				5500953A1690BE4700977D3E /* SoapNil.m */,
-				5500953B1690BE4700977D3E /* SoapObject.h */,
-				5500953C1690BE4700977D3E /* SoapObject.m */,
-				5500953D1690BE4700977D3E /* SoapParameter.h */,
-				5500953E1690BE4700977D3E /* SoapParameter.m */,
-				5500953F1690BE4700977D3E /* SoapReachability.h */,
-				550095401690BE4700977D3E /* SoapReachability.m */,
-				550095411690BE4700977D3E /* SoapRequest.h */,
-				550095421690BE4700977D3E /* SoapRequest.m */,
-				550095431690BE4700977D3E /* SoapService.h */,
-				550095441690BE4700977D3E /* SoapService.m */,
-			);
-			path = Soap;
-			sourceTree = "<group>";
-		};
-		550095451690BE4700977D3E /* TouchXML */ = {
-			isa = PBXGroup;
-			children = (
-				550095461690BE4700977D3E /* CTidy.h */,
-				550095471690BE4700977D3E /* CTidy.m */,
-				550095481690BE4700977D3E /* CXHTMLDocument.h */,
-				550095491690BE4700977D3E /* CXHTMLDocument.m */,
-				5500954A1690BE4700977D3E /* CXMLDocument.h */,
-				5500954B1690BE4700977D3E /* CXMLDocument.m */,
-				5500954C1690BE4700977D3E /* CXMLDocument_CreationExtensions.h */,
-				5500954D1690BE4700977D3E /* CXMLDocument_CreationExtensions.m */,
-				5500954E1690BE4700977D3E /* CXMLDocument_PrivateExtensions.h */,
-				5500954F1690BE4700977D3E /* CXMLDocument_PrivateExtensions.m */,
-				550095501690BE4700977D3E /* CXMLElement.h */,
-				550095511690BE4700977D3E /* CXMLElement.m */,
-				550095521690BE4700977D3E /* CXMLElement_CreationExtensions.h */,
-				550095531690BE4700977D3E /* CXMLElement_CreationExtensions.m */,
-				550095541690BE4700977D3E /* CXMLElement_ElementTreeExtensions.h */,
-				550095551690BE4700977D3E /* CXMLElement_ElementTreeExtensions.m */,
-				550095561690BE4700977D3E /* CXMLNamespaceNode.h */,
-				550095571690BE4700977D3E /* CXMLNamespaceNode.m */,
-				550095581690BE4700977D3E /* CXMLNode.h */,
-				550095591690BE4700977D3E /* CXMLNode.m */,
-				5500955A1690BE4700977D3E /* CXMLNode_CreationExtensions.h */,
-				5500955B1690BE4700977D3E /* CXMLNode_CreationExtensions.m */,
-				5500955C1690BE4700977D3E /* CXMLNode_PrivateExtensions.h */,
-				5500955D1690BE4700977D3E /* CXMLNode_PrivateExtensions.m */,
-				5500955E1690BE4700977D3E /* CXMLNode_XPathExtensions.h */,
-				5500955F1690BE4700977D3E /* CXMLNode_XPathExtensions.m */,
-				550095601690BE4700977D3E /* TouchXML.h */,
-			);
-			path = TouchXML;
 			sourceTree = "<group>";
 		};
 		55271463168E111600376CBD = {
@@ -301,7 +149,7 @@
 		55271478168E111600376CBD /* Time Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				5500951C1690BE4700977D3E /* WSDL */,
+				5503D9141694A33200A8AB12 /* WSDL */,
 				552714A2168E115B00376CBD /* Controllers */,
 				55271481168E111600376CBD /* AppDelegate.h */,
 				55271482168E111600376CBD /* AppDelegate.m */,
@@ -346,15 +194,6 @@
 				552714BC168E18C000376CBD /* libPods.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		55D7F4BE1691EE6900025C69 /* Call */ = {
-			isa = PBXGroup;
-			children = (
-				55D7F4BF1691EE6900025C69 /* API_TIMESHEET.h */,
-				55D7F4C01691EE6900025C69 /* API_TIMESHEET.m */,
-			);
-			path = Call;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,37 +302,12 @@
 				552714A9168E119200376CBD /* DiaViewController.m in Sources */,
 				552714AA168E119200376CBD /* MesViewController.m in Sources */,
 				552714AB168E119200376CBD /* SemTableViewController.m in Sources */,
-				550095621690BE4700977D3E /* API_TIMESHEETAPI_TIMESHEET.m in Sources */,
-				550095631690BE4700977D3E /* API_TIMESHEETServices.m in Sources */,
-				550095641690BE4700977D3E /* Soap+Prefix.m in Sources */,
-				550095651690BE4700977D3E /* NSData+Base64.m in Sources */,
-				550095661690BE4700977D3E /* NSMutableArray+Soap.m in Sources */,
-				550095671690BE4700977D3E /* Soap.m in Sources */,
-				550095681690BE4700977D3E /* SoapArray.m in Sources */,
-				550095691690BE4700977D3E /* SoapDictionary.m in Sources */,
-				5500956A1690BE4700977D3E /* SoapFault.m in Sources */,
-				5500956B1690BE4700977D3E /* SoapHandler.m in Sources */,
-				5500956C1690BE4700977D3E /* SoapLiteral.m in Sources */,
-				5500956D1690BE4700977D3E /* SoapNil.m in Sources */,
-				5500956E1690BE4700977D3E /* SoapObject.m in Sources */,
-				5500956F1690BE4700977D3E /* SoapParameter.m in Sources */,
-				550095701690BE4700977D3E /* SoapReachability.m in Sources */,
-				550095711690BE4700977D3E /* SoapRequest.m in Sources */,
-				550095721690BE4700977D3E /* SoapService.m in Sources */,
-				550095731690BE4700977D3E /* CTidy.m in Sources */,
-				550095741690BE4700977D3E /* CXHTMLDocument.m in Sources */,
-				550095751690BE4700977D3E /* CXMLDocument.m in Sources */,
-				550095761690BE4700977D3E /* CXMLDocument_CreationExtensions.m in Sources */,
-				550095771690BE4700977D3E /* CXMLDocument_PrivateExtensions.m in Sources */,
-				550095781690BE4700977D3E /* CXMLElement.m in Sources */,
-				550095791690BE4700977D3E /* CXMLElement_CreationExtensions.m in Sources */,
-				5500957A1690BE4700977D3E /* CXMLElement_ElementTreeExtensions.m in Sources */,
-				5500957B1690BE4700977D3E /* CXMLNamespaceNode.m in Sources */,
-				5500957C1690BE4700977D3E /* CXMLNode.m in Sources */,
-				5500957D1690BE4700977D3E /* CXMLNode_CreationExtensions.m in Sources */,
-				5500957E1690BE4700977D3E /* CXMLNode_PrivateExtensions.m in Sources */,
-				5500957F1690BE4700977D3E /* CXMLNode_XPathExtensions.m in Sources */,
-				55D7F4C11691EE6900025C69 /* API_TIMESHEET.m in Sources */,
+				5503D9211694A33200A8AB12 /* API_TIMESHEET.m in Sources */,
+				5503D9221694A33200A8AB12 /* NSDate+ISO8601Parsing.m in Sources */,
+				5503D9231694A33200A8AB12 /* NSDate+ISO8601Unparsing.m in Sources */,
+				5503D9241694A33200A8AB12 /* USAdditions.m in Sources */,
+				5503D9251694A33200A8AB12 /* USGlobals.m in Sources */,
+				5503D9261694A33200A8AB12 /* xsd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

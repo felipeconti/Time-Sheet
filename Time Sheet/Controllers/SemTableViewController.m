@@ -8,13 +8,14 @@
 
 #import "SemTableViewController.h"
 #import "API_TIMESHEET.h"
+#import "API_TIMESHEET.h"
 
 @interface SemTableViewController (){
     NSArray *TSs;
 }
 - (void)fetchData;
-- (NSString *) montaXML:(NSString*)tipo Data:(NSString*)data;
 - (void)RefreshData;
+- (NSString*)Get_TS:(NSString*)cUser pass:(NSString*)cPass;
 @end
 
 @implementation SemTableViewController
@@ -23,13 +24,9 @@
 
 - (void)fetchData{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
+    NSLog(@"%@", [self Get_TS:@"fbc" pass:@"123"]);
     
-    NSString *cXML = [NSString stringWithFormat:@"%@", [self montaXML:@"1" Data:@"31/12/12"]];
-
-    API_TIMESHEET *Call = [[API_TIMESHEET alloc] init];
-    //TSs = [Call run:cXML];
-    [Call run:cXML];
-
     [self.tableView reloadData];
     
     [self.refreshControl endRefreshing];
@@ -37,20 +34,37 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
-#pragma mark - montaXML
-
-- (NSString *) montaXML:(NSString*)tipo Data:(NSString*)data{
-
-    NSMutableString* s = [NSMutableString string];
-	[s appendString: @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"];
-	[s appendString: @"<response>"];
+- (NSString*)Get_TS:(NSString*)cUser pass:(NSString*)cPass{
     
-	[s appendFormat: @"<tipo>%@</tipo>", tipo];
-	[s appendFormat: @"<data>%@</data>", data];
+    API_TIMESHEETSOAPBinding *binding = [API_TIMESHEET API_TIMESHEETSOAPBinding];
+    API_TIMESHEETSOAPBindingResponse *response;
+    
+    API_TIMESHEET_GET_TS *request = [[API_TIMESHEET_GET_TS alloc]init];
+    
+    request.CUSER = cUser;
+    request.CPASS = cPass;
+    
+    response = [binding GET_TSUsingParameters:request];
+    
+    id bodyPart;
+    @try{
+        bodyPart = [response.bodyParts objectAtIndex:0]; // Assuming just 1 part in response which is fine
+    }
+    @catch (NSException* exception)
+    {
+        return @"Error while trying to process request";
+    }
+    
+    if ([bodyPart isKindOfClass:[SOAPFault class]]) {
+        
+        NSString* errorMesg = ((SOAPFault *)bodyPart).simpleFaultString;
+        return [@"Server Error: " stringByAppendingString:errorMesg];
+    }
+    else if([bodyPart isKindOfClass:[API_TIMESHEET_GET_TSRESPONSE class]]) {
+        API_TIMESHEET_GET_TSRESPONSE* rateResponse = bodyPart;
+        return rateResponse.GET_TSRESULT;
+    }
 
-	[s appendString: @"</response>"];
-
-    return s;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
