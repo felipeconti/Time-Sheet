@@ -8,7 +8,11 @@
 
 #import "SemTableViewController.h"
 #import "API_TIMESHEET.h"
-#import "API_TIMESHEET.h"
+#import "TS.h"
+#import "TSParser.h"
+#import "XMLDictionary.h"
+
+//#define XML_ATTRIBUTES_KEY @"tss";
 
 @interface SemTableViewController (){
     NSArray *TSs;
@@ -16,6 +20,7 @@
 - (void)fetchData;
 - (void)RefreshData;
 - (NSString*)Get_TS:(NSString*)cUser pass:(NSString*)cPass;
+- (NSArray*)Paser_TS:(NSString*)TSs_XML;
 @end
 
 @implementation SemTableViewController
@@ -62,9 +67,18 @@
     }
     else if([bodyPart isKindOfClass:[API_TIMESHEET_GET_TSRESPONSE class]]) {
         API_TIMESHEET_GET_TSRESPONSE* rateResponse = bodyPart;
+        [self Paser_TS:rateResponse.GET_TSRESULT];
         return rateResponse.GET_TSRESULT;
     }
 
+}
+
+- (NSArray*)Paser_TS:(NSString*)TSs_XML{
+    
+    NSDictionary *xmlDictionary = [NSDictionary dictionaryWithXMLString:TSs_XML];
+    TSs = [TSParser parserObject:xmlDictionary];
+
+    return TSs;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -113,9 +127,11 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.detailTextLabel.text = [TSs objectAtIndex:indexPath.row];
-    cell.textLabel.text = [TSs objectAtIndex:indexPath.row];
-    
+    TS *Ts = [TSs objectAtIndex:indexPath.row];
+
+    cell.detailTextLabel.text = Ts.cod;
+    cell.textLabel.text = Ts.data;
+
     return cell;
 }
 

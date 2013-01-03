@@ -14,6 +14,8 @@
 		5503D9251694A33200A8AB12 /* USGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D91E1694A33200A8AB12 /* USGlobals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5503D9261694A33200A8AB12 /* xsd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503D9201694A33200A8AB12 /* xsd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5511EDC71690A3EC00059C50 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5511EDC61690A3EC00059C50 /* CFNetwork.framework */; };
+		55191E551695B0D400490C11 /* TSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 55191E541695B0D400490C11 /* TSParser.m */; };
+		55236A801694B35900B39882 /* TS.m in Sources */ = {isa = PBXBuildFile; fileRef = 55236A7F1694B35900B39882 /* TS.m */; };
 		55271473168E111600376CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55271472168E111600376CBD /* UIKit.framework */; };
 		55271475168E111600376CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55271474168E111600376CBD /* Foundation.framework */; };
 		55271477168E111600376CBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55271476168E111600376CBD /* CoreGraphics.framework */; };
@@ -55,6 +57,10 @@
 		5503D91F1694A33200A8AB12 /* xsd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xsd.h; sourceTree = "<group>"; };
 		5503D9201694A33200A8AB12 /* xsd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xsd.m; sourceTree = "<group>"; };
 		5511EDC61690A3EC00059C50 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		55191E531695B0D400490C11 /* TSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSParser.h; sourceTree = "<group>"; };
+		55191E541695B0D400490C11 /* TSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSParser.m; sourceTree = "<group>"; };
+		55236A7E1694B35900B39882 /* TS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TS.h; sourceTree = "<group>"; };
+		55236A7F1694B35900B39882 /* TS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TS.m; sourceTree = "<group>"; };
 		5527146E168E111600376CBD /* Time Sheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Sheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55271472168E111600376CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		55271474168E111600376CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +122,17 @@
 			path = WSDL;
 			sourceTree = "<group>";
 		};
+		55236A7D1694B35900B39882 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55236A7E1694B35900B39882 /* TS.h */,
+				55236A7F1694B35900B39882 /* TS.m */,
+				55191E531695B0D400490C11 /* TSParser.h */,
+				55191E541695B0D400490C11 /* TSParser.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		55271463168E111600376CBD = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +166,7 @@
 		55271478168E111600376CBD /* Time Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				55236A7D1694B35900B39882 /* Models */,
 				5503D9141694A33200A8AB12 /* WSDL */,
 				552714A2168E115B00376CBD /* Controllers */,
 				55271481168E111600376CBD /* AppDelegate.h */,
@@ -308,6 +326,8 @@
 				5503D9241694A33200A8AB12 /* USAdditions.m in Sources */,
 				5503D9251694A33200A8AB12 /* USGlobals.m in Sources */,
 				5503D9261694A33200A8AB12 /* xsd.m in Sources */,
+				55236A801694B35900B39882 /* TS.m in Sources */,
+				55191E551695B0D400490C11 /* TSParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SemTableViewController : UITableViewController <UITableViewDataSource>
+@interface SemTableViewController : UITableViewController <UITableViewDataSource, NSXMLParserDelegate>
 
 @end
