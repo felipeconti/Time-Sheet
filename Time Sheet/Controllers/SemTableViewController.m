@@ -92,7 +92,6 @@
 
 - (void)viewDidLoad
 {
-    TSs = @[@"Oi",@"Oii",@"Oiii"];
     [self fetchData];
     [super viewDidLoad];
 
