@@ -30,6 +30,7 @@
 		552714A9168E119200376CBD /* DiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A4168E119200376CBD /* DiaViewController.m */; };
 		552714AA168E119200376CBD /* MesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A6168E119200376CBD /* MesViewController.m */; };
 		552714AB168E119200376CBD /* SemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552714A8168E119200376CBD /* SemTableViewController.m */; };
+		55CF521F16CD0BAD00EDAB87 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF521E16CD0BAD00EDAB87 /* Crashlytics.framework */; };
 		5F454CBB53344AAC816D6864 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0DA551B6B04628A9CEEEC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		552714A7168E119200376CBD /* SemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SemTableViewController.h; path = Controllers/SemTableViewController.h; sourceTree = "<group>"; };
 		552714A8168E119200376CBD /* SemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SemTableViewController.m; path = Controllers/SemTableViewController.m; sourceTree = "<group>"; };
 		552714B4168E18BF00376CBD /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
+		55CF521E16CD0BAD00EDAB87 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9F0DA551B6B04628A9CEEEC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E448DC025D1D4D10A4130354 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				55271475168E111600376CBD /* Foundation.framework in Frameworks */,
 				55271477168E111600376CBD /* CoreGraphics.framework in Frameworks */,
 				5F454CBB53344AAC816D6864 /* libPods.a in Frameworks */,
+				55CF521F16CD0BAD00EDAB87 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +157,7 @@
 		55271471168E111600376CBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55CF521E16CD0BAD00EDAB87 /* Crashlytics.framework */,
 				5511EDC61690A3EC00059C50 /* CFNetwork.framework */,
 				55271472168E111600376CBD /* UIKit.framework */,
 				55271474168E111600376CBD /* Foundation.framework */,
@@ -225,6 +229,7 @@
 				5527146B168E111600376CBD /* Frameworks */,
 				5527146C168E111600376CBD /* Resources */,
 				1C2E158FBF34463086C01899 /* Copy Pods Resources */,
+				55CF521C16CD0B5D00EDAB87 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -307,6 +312,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		55CF521C16CD0B5D00EDAB87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 28fd22ea2f7b40695b6d53f2749c61f0c75e47ac";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -417,6 +435,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E448DC025D1D4D10A4130354 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Time Sheet/Time Sheet-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -444,6 +466,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E448DC025D1D4D10A4130354 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Time Sheet/Time Sheet-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
