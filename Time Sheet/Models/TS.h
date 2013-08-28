@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSString *loja;
 @property (nonatomic, strong) NSString *caso;
 @property (nonatomic, strong) NSString *ut;
+@property (nonatomic, strong) NSString *complemento;
 
 @end

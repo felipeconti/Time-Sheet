@@ -13,15 +13,16 @@
 + (NSArray *)parserObject:(id)object
 {
     NSMutableArray *TSs = [NSMutableArray array];
-    for (NSDictionary *_ts in [object objectForKey:@"ts"]) {
+    for (NSDictionary *_ts in object) {
         TS *ts = [[TS alloc] init];
-        ts.cod = [_ts objectForKey:@"cod"];
+        ts.cod = [_ts objectForKey:@"NUMERO"];
 //        ts.data = [self formatDate:[_ts objectForKey:@"data"]];
-        ts.data = [_ts objectForKey:@"data"];
-        ts.part = [_ts objectForKey:@"part"];
-        ts.cliente = [_ts objectForKey:@"cliente"];
-        ts.loja = [_ts objectForKey:@"loja"];
-        ts.caso = [_ts objectForKey:@"caso"];
+        ts.data = [_ts objectForKey:@"DATA"];
+        ts.part = [_ts objectForKey:@"COD_ADVG"];
+        ts.cliente = [_ts objectForKey:@"COD_CLIENTE"];
+        ts.loja = [_ts objectForKey:@"ORGNCODIG"];
+        ts.caso = [_ts objectForKey:@"PASTA"];
+        ts.complemento = [_ts objectForKey:@"COMPLEMENTO"];
         [TSs addObject:ts];
         ts = nil;
     }

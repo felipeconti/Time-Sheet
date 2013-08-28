@@ -11,6 +11,8 @@
 #import "TS.h"
 #import "TSParser.h"
 #import "XMLDictionary.h"
+#import "AFJSONRequestOperation.h"
+#import "AFHTTPClient.h"
 
 //#define XML_ATTRIBUTES_KEY @"tss";
 
@@ -19,66 +21,45 @@
 }
 - (void)fetchData;
 - (void)RefreshData;
-- (NSString*)Get_TS:(NSString*)cUser pass:(NSString*)cPass;
-- (NSArray*)Paser_TS:(NSString*)TSs_XML;
 @end
 
 @implementation SemTableViewController
 
 #pragma mark - FetchData
 
-- (void)fetchData{
+- (void)fetchData
+{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 
-    NSLog(@"%@", [self Get_TS:@"fbc" pass:@"123"]);
+    NSURL *url = [NSURL URLWithString:@"http://spod2825.sp01.local/sisjuri/get?client_key=1234"];  
     
-    [self.tableView reloadData];
-    
-    [self.refreshControl endRefreshing];
-    
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    [httpClient setParameterEncoding:AFJSONParameterEncoding];
 
-- (NSString*)Get_TS:(NSString*)cUser pass:(NSString*)cPass{
-    
-    API_TIMESHEETSOAPBinding *binding = [API_TIMESHEET API_TIMESHEETSOAPBinding];
-    API_TIMESHEETSOAPBindingResponse *response;
-    
-    API_TIMESHEET_GET_TS *request = [[API_TIMESHEET_GET_TS alloc]init];
-    
-    request.CUSER = cUser;
-    request.CPASS = cPass;
-    
-    response = [binding GET_TSUsingParameters:request];
-    
-    id bodyPart;
-    @try{
-        bodyPart = [response.bodyParts objectAtIndex:0]; // Assuming just 1 part in response which is fine
-    }
-    @catch (NSException* exception)
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
+                                                            path:@"http://spod2825.sp01.local/sisjuri/get?client_key=1234"
+                                                      parameters:@{@"USER":@"LFC",
+                                                                   @"PASS":@"CHAVES1989",
+                                                                   @"TABLE":@"RCR.TIME_SHEET",
+                                                                   @"DATE_CREATE":@"20130828",
+                                                                   }];
+   
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
-        return @"Error while trying to process request";
-    }
-    
-    if ([bodyPart isKindOfClass:[SOAPFault class]]) {
-        
-        NSString* errorMesg = ((SOAPFault *)bodyPart).simpleFaultString;
-        return [@"Server Error: " stringByAppendingString:errorMesg];
-    }
-    else if([bodyPart isKindOfClass:[API_TIMESHEET_GET_TSRESPONSE class]]) {
-        API_TIMESHEET_GET_TSRESPONSE* rateResponse = bodyPart;
-        [self Paser_TS:rateResponse.GET_TSRESULT];
-        return rateResponse.GET_TSRESULT;
-    }
+        TSs = [TSParser parserObject:JSON];
+        [self.tableView reloadData];
 
-}
+    }
+    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+    {
+        NSLog(@"ERRO na conexão!!! = %@", [error description]);
+    }
+    ];
 
-- (NSArray*)Paser_TS:(NSString*)TSs_XML{
-    
-    NSDictionary *xmlDictionary = [NSDictionary dictionaryWithXMLString:TSs_XML];
-    TSs = [TSParser parserObject:xmlDictionary];
+    [self.refreshControl endRefreshing];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
-    return TSs;
+    [operation start];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -97,6 +78,7 @@
 
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     //refreshControl.tintColor = [UIColormagentaColor];
+    
     [refreshControl addTarget:self action:@selector(RefreshData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
@@ -129,7 +111,7 @@
     TS *Ts = [TSs objectAtIndex:indexPath.row];
 
     cell.detailTextLabel.text = Ts.cod;
-    cell.textLabel.text = Ts.data;
+    cell.textLabel.text = Ts.complemento;
 
     return cell;
 }
