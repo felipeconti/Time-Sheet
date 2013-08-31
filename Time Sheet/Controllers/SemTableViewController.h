@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SemTableViewController : UITableViewController <UITableViewDataSource, NSXMLParserDelegate>
+@interface SemTableViewController : UITableViewController <UITableViewDataSource, UITextFieldDelegate>
+- (IBAction)insertTS:(id)sender;
+- (IBAction)buttonRefresh:(id)sender;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+@property (weak, nonatomic) IBOutlet UITextField *server;
 
 @end

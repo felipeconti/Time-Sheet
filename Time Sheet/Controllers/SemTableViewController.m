@@ -6,15 +6,13 @@
 //  Copyright (c) 2012 Felipe Bonvicini Conti. All rights reserved.
 //
 
+#import "DiaViewController.h"
 #import "SemTableViewController.h"
-#import "API_TIMESHEET.h"
 #import "TS.h"
 #import "TSParser.h"
-#import "XMLDictionary.h"
+//#import "XMLDictionary.h"
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
-
-//#define XML_ATTRIBUTES_KEY @"tss";
 
 @interface SemTableViewController (){
     NSArray *TSs;
@@ -31,17 +29,20 @@
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 
-    NSURL *url = [NSURL URLWithString:@"http://spod2825.sp01.local/sisjuri/get?client_key=1234"];  
+    TSs = @[];
+    [self.tableView reloadData];
+
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://%@/", self.server.text] ];
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [httpClient setParameterEncoding:AFJSONParameterEncoding];
 
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
-                                                            path:@"http://spod2825.sp01.local/sisjuri/get?client_key=1234"
+                                                            path:@"/sisjuri/get_sync?client_key=123456789"
                                                       parameters:@{@"USER":@"LFC",
                                                                    @"PASS":@"CHAVES1989",
                                                                    @"TABLE":@"RCR.TIME_SHEET",
-                                                                   @"DATE_CREATE":@"20130828",
+                                                                   @"DATE_CREATE":@"20130829"
                                                                    }];
    
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
@@ -52,7 +53,7 @@
     }
     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
     {
-        NSLog(@"ERRO na conexão!!! = %@", [error description]);
+        NSLog(@"ERRO na conexão = %@", [error description]);
     }
     ];
 
@@ -75,7 +76,7 @@
 {
     [self fetchData];
     [super viewDidLoad];
-
+    
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     //refreshControl.tintColor = [UIColormagentaColor];
     
@@ -169,7 +170,21 @@
 }
 
 - (void)RefreshData {
-    [self performSelector:@selector(fetchData) withObject:nil afterDelay:0];
+    //[self performSelector:@selector(fetchData) withObject:nil afterDelay:100];
+    [self performSelector:@selector(fetchData)];
+}
+
+- (IBAction)insertTS:(id)sender {
+    
+}
+
+- (IBAction)buttonRefresh:(id)sender {
+    [self RefreshData];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self RefreshData];
+    [textField resignFirstResponder];
 }
 
 @end
