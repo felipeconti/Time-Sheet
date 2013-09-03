@@ -164,7 +164,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="XbD-5F-spl" kind="push" identifier="detailSegue" id="14a-MO-2MZ"/>
+                                    <segue destination="XbD-5F-spl" kind="push" identifier="detailSegue" id="riE-Id-UWe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
