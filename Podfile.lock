@@ -1,17 +1,19 @@
-
 PODS:
-- AFNetworking (1.1.0)
-- Kal (1.0rc1)
-- XMLDictionary (2.0.0)
+  - AFNetworking (1.3.2)
+  - JSONKit (1.5pre)
+  - Kal (1.0rc1)
+  - Toast (2.0)
 
 DEPENDENCIES:
-- AFNetworking
-- Kal
-- XMLDictionary
+  - AFNetworking (~> 1.3.2)
+  - JSONKit
+  - Kal
+  - Toast
 
 SPEC CHECKSUMS:
-  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  AFNetworking: 7f9bcd7c287a75476cd5c61e82fd3380e93e4c54
+  JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
   Kal: 1662d563939f65065f878ac82a90bb34863634ef
-  XMLDictionary: d41dcb25b03e480f374551037396f4fc1307ff1c
+  Toast: 05f46f9d48ddf6e29193f802b038e4fb41f806fa
 
-COCOAPODS: 0.16.0
+COCOAPODS: 0.23.0
