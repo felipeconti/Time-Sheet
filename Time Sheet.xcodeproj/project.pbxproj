@@ -29,6 +29,7 @@
 		5571470017CF8ED000235D97 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 557146FA17CF8ED000235D97 /* README.md */; };
 		5571470117CF8ED000235D97 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 557146FB17CF8ED000235D97 /* release_notes.md */; };
 		5571470317CF8F3F00235D97 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5571470217CF8F3F00235D97 /* libz.dylib */; };
+		55D4FEA217D67D6700C18AEF /* DetailTSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4FEA117D67D6700C18AEF /* DetailTSViewController.m */; };
 		5F454CBB53344AAC816D6864 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0DA551B6B04628A9CEEEC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,8 @@
 		557146FD17CF8ED000235D97 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		557146FE17CF8ED000235D97 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		5571470217CF8F3F00235D97 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		55D4FEA017D67D6700C18AEF /* DetailTSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTSViewController.h; path = Controllers/DetailTSViewController.h; sourceTree = "<group>"; };
+		55D4FEA117D67D6700C18AEF /* DetailTSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTSViewController.m; path = Controllers/DetailTSViewController.m; sourceTree = "<group>"; };
 		9F0DA551B6B04628A9CEEEC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E448DC025D1D4D10A4130354 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -177,6 +180,8 @@
 		552714A2168E115B00376CBD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55D4FEA017D67D6700C18AEF /* DetailTSViewController.h */,
+				55D4FEA117D67D6700C18AEF /* DetailTSViewController.m */,
 				552714A3168E119200376CBD /* DiaViewController.h */,
 				552714A4168E119200376CBD /* DiaViewController.m */,
 				552714A5168E119200376CBD /* MesViewController.h */,
@@ -332,6 +337,7 @@
 				552714AB168E119200376CBD /* SemTableViewController.m in Sources */,
 				55236A801694B35900B39882 /* TS.m in Sources */,
 				55191E551695B0D400490C11 /* TSParser.m in Sources */,
+				55D4FEA217D67D6700C18AEF /* DetailTSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
