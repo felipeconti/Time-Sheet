@@ -8,9 +8,9 @@
 
 #import "DiaViewController.h"
 #import "SemTableViewController.h"
+#import "DetailTSViewController.h"
 #import "TS.h"
 #import "TSParser.h"
-//#import "XMLDictionary.h"
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
 
@@ -39,12 +39,15 @@
 
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
                                                             path:@"/sisjuri/get_sync?client_key=123456789"
-                                                      parameters:@{@"USER":@"LFC",
-                                                                   @"PASS":@"CHAVES1989",
+                                                      parameters:@{@"USER":@"RCR",
+                                                                   @"PASS":@"BCS",
                                                                    @"TABLE":@"RCR.TIME_SHEET",
-                                                                   @"DATE_CREATE":@"20130829"
+                                                                   @"DATE_CREATE":@"20130829",
+                                                                   @"AMOUNT":@"2"
                                                                    }];
-   
+
+    [request setTimeoutInterval:10];
+    
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
         TSs = [TSParser parserObject:JSON];
@@ -54,6 +57,7 @@
     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
     {
         NSLog(@"ERRO na conexão = %@", [error description]);
+        [[[UIAlertView alloc] initWithTitle:@"No connect" message:@"Connection not established" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
     ];
 
@@ -111,8 +115,11 @@
     
     TS *Ts = [TSs objectAtIndex:indexPath.row];
 
-    cell.detailTextLabel.text = Ts.cod;
-    cell.textLabel.text = Ts.complemento;
+    //cell.detailTextLabel.text = Ts.cod;
+    //cell.textLabel.text = Ts.complemento;
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"Cód: %@", Ts.cod];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"UTs: %@", Ts.ut];
 
     return cell;
 }
@@ -169,6 +176,21 @@
      */
 }
 
+#pragma mark - UIStoryBoardSegue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        DetailTSViewController *detailTsViewController = (DetailTSViewController *)segue.destinationViewController;
+
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+        TS *ts = [TSs objectAtIndex:indexPath.row];
+        detailTsViewController.ts = ts;
+
+    }
+}
+
 - (void)RefreshData {
     //[self performSelector:@selector(fetchData) withObject:nil afterDelay:100];
     [self performSelector:@selector(fetchData)];
@@ -185,6 +207,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self RefreshData];
     [textField resignFirstResponder];
+    return TRUE;
 }
 
 @end

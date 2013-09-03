@@ -12,11 +12,13 @@
 
 @property (nonatomic, strong) NSString *cod;
 @property (nonatomic, strong) NSString *data;
-@property (nonatomic, strong) NSString *part;
+@property (nonatomic, strong) NSString *advogado;
 @property (nonatomic, strong) NSString *cliente;
 @property (nonatomic, strong) NSString *loja;
 @property (nonatomic, strong) NSString *caso;
 @property (nonatomic, strong) NSString *ut;
 @property (nonatomic, strong) NSString *complemento;
+
++ (TS *)TSEmpty;
 
 @end

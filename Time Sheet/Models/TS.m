@@ -9,5 +9,18 @@
 #import "TS.h"
 
 @implementation TS
++ (TS *)TSEmpty{
+    
+    TS *ts = [[TS alloc] init];
+    ts.cod = @"";
+    ts.data = @"";
+    ts.advogado = @"";
+    ts.cliente = @"";
+    ts.loja = @"";
+    ts.caso = @"";
+    ts.ut = @"";
+    ts.complemento = @"Vazio";
 
+    return ts;
+}
 @end

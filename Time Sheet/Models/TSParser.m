@@ -18,13 +18,18 @@
         ts.cod = [_ts objectForKey:@"NUMERO"];
 //        ts.data = [self formatDate:[_ts objectForKey:@"data"]];
         ts.data = [_ts objectForKey:@"DATA"];
-        ts.part = [_ts objectForKey:@"COD_ADVG"];
+        ts.advogado = [_ts objectForKey:@"COD_ADVG"];
         ts.cliente = [_ts objectForKey:@"COD_CLIENTE"];
         ts.loja = [_ts objectForKey:@"ORGNCODIG"];
         ts.caso = [_ts objectForKey:@"PASTA"];
+        ts.ut = [_ts objectForKey:@"TEMPO_REAL"];
         ts.complemento = [_ts objectForKey:@"COMPLEMENTO"];
         [TSs addObject:ts];
         ts = nil;
+    }
+
+    if (TSs.count == 0){
+        [TSs addObject: [TS TSEmpty] ];
     }
     
     return TSs;
